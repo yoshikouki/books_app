@@ -1,0 +1,7 @@
+# エディタ
+/.idea
+/.idea/*
+
+# その他
+/.byebug_history
+/vendor
