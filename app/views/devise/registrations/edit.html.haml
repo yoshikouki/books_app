@@ -1,0 +1,80 @@
+- i18n_devise_scope = 'devise.registrations.edit'
+
+%h2
+  = t('title',
+      scope: i18n_devise_scope,
+      resource: t('activerecord.models.user'))
+
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = render "devise/shared/error_messages", resource: resource
+
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name, autofocus: true, autocomplete: "name"
+
+  .field
+    = f.label :avatar
+    %br/
+    = f.file_field :avatar, autocomplete: "avatar"
+
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email, autocomplete: "email"
+
+  .field
+    = f.label :password
+    %br/
+    = f.password_field(:password,
+                       autocomplete: "new-password",
+                       placeholder: t('leave_blank_if_you_don_t_want_to_change_it',
+                                    scope: i18n_devise_scope))
+    - if @minimum_password_length
+      %br/
+      %small
+        = t('minimum_password_length',
+            scope: 'devise.shared',
+            count: @minimum_password_length)
+
+  .field
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation, autocomplete: "new-password"
+
+  .field
+    = f.label :biography
+    %br/
+    = f.text_field :biography, autocomplete: "biography"
+
+  .field
+    = f.label :zip_code
+    %br/
+    = f.text_field :zip_code, autocomplete: "zip_code"
+
+  .field
+    = f.label :address
+    %br/
+    = f.text_field :address, autocomplete: "address"
+
+  .field
+    = f.label :current_password
+    %small
+      = t('we_need_your_current_password_to_confirm_your_changes',
+          scope: i18n_devise_scope)
+    %br/
+    = f.password_field :current_password, autocomplete: "current-password"
+
+  .actions
+    = f.submit t('update', scope: i18n_devise_scope)
+
+%h3
+  = t('cancel_my_account', scope: i18n_devise_scope)
+%p
+  = t('unhappy', scope: i18n_devise_scope)
+  = button_to(t('cancel_my_account', scope: i18n_devise_scope),
+              registration_path(resource_name),
+              data: { confirm: t('are_you_sure', scope: i18n_devise_scope) },
+              method: :delete)
+
+= link_to t('nav.back'), :back

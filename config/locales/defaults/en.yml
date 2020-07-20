@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    attributes:
+      book:
+        title: 'Title'
+        memo: 'Memo'
+        author: 'Author'
+        picture: 'Picture'
+      user:
+        name: 'Name'
+        biography: 'Bio'
+        zip_code: 'Zip code'
+        address: 'Address'
+    errors:
+      template:
+        header:
+          one: "1 error prohibited this Book from being saved"
+          other: "%{count} errors prohibited this Book from being saved"
+        body:    "There were problems with the following fields:"

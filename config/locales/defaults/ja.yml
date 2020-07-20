@@ -1,0 +1,28 @@
+ja:
+  activerecord:
+    attributes:
+      book:
+        title: 'タイトル'
+        memo: '備考'
+        author: '著者'
+        picture: '画像'
+      user:
+        name: 'ユーザー名'
+<<<<<<< HEAD
+<<<<<<< HEAD
+        biography: '自己紹介'
+        zip_code: '郵便番号'
+        address: '住所'
+=======
+>>>>>>> 15b9856... update/ アカウント登録の Views を変更。I18nに対応
+=======
+        biography: '自己紹介'
+        zip_code: '郵便番号'
+        address: '住所'
+>>>>>>> 9e69b69... update/ ユーザー情報変更画面をカスタマイズ・I19nに対応
+    errors:
+      template:
+        header:
+          one: "1つのエラーが見つかったため、ブックは保存できませんでした"
+          other: "%{count}つのエラーが見つかったため、ブックは保存できませんでした"
+        body:    "次の項目をご確認ください : "
