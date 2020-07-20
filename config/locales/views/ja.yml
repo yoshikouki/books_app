@@ -1,0 +1,43 @@
+ja:
+  app_title: 'BookApp'
+  books:
+    index:
+      page_title: 'ブック一覧'
+    new:
+      page_title: '新規ブック'
+      # page_title: 'New book'
+    create:
+      success: '新しいブックが登録されました！'
+    edit:
+      page_title: 'ブック編集'
+      # page_title: 'Editing book'
+    update:
+      success: 'ブックは更新されました！'
+    destroy:
+      success: 'ブックは削除されました。'
+  nav:
+    new: '作成'
+    show: '詳細'
+    edit: '変更'
+    save: '保存'
+    back: '戻る'
+    destroy: '削除'
+    destroy_confirm: '本当に削除しますか？'
+    sign_out: 'ログアウト'
+  # ページネーション（kaminari）
+  views:
+    pagination:
+      first: "&laquo; 始"
+      last: "後 &raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "&hellip;"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: ""
+          one: "<strong>1-1</strong>/1件中"
+          other: "<strong>1-%{count}</strong>/%{count}件中"
+      more_pages:
+        display_entries: "<strong>%{first}-%{last}</strong>/%{total}件中"

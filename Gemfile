@@ -34,10 +34,21 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'haml-rails'
 # 画像アップロード機能
 gem 'carrierwave'
+# I18n
+gem 'rails-i18n', '~> 6.0.0'
+gem 'devise-i18n'
+# ページネーション
+gem 'kaminari'
+# ユーザー認証
+gem 'devise', '~> 4.7.1'
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # 環境変数
+  gem 'dotenv-rails'
 end
 
 group :development do
