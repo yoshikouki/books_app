@@ -1,24 +1,14 @@
-# README
+# Books App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+これはフィヨルドブートキャンプの Ruby on Rails の課題成果物です。
 
-* Ruby version
+## Usage
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+git clone https://github.com/yoshikouki/books_app.git
+cd books_app
+bundle install --path=vendor/bundle
+bundle exec rails s
+```
