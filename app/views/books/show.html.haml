@@ -9,6 +9,9 @@
 %p
   %b Author:
   = @book.author
+%p
+  %b Picture:
+  = image_tag @book.picture_url if @book.picture.present?
 
 = link_to 'Edit', edit_book_path(@book)
 \|
