@@ -1,1 +1,8 @@
 ja:
+  books:
+    create:
+      success: '新しいブックが登録されました！'
+    update:
+      success: 'ブックは更新されました！'
+    destroy:
+      success: 'ブックは削除されました。'
