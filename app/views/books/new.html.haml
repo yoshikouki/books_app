@@ -1,5 +1,6 @@
-%h1 New book
+%h1
+  = t('.page_title')
 
 = render 'form'
 
-= link_to 'Back', books_path
+= link_to t('nav.back'), books_path

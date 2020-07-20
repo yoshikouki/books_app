@@ -1,7 +1,8 @@
 = form_for @book do |f|
   - if @book.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@book.errors.count, "error")} prohibited this book from being saved:"
+      %h2
+        = t('activerecord.errors.template.header', count: @book.errors.count)
       %ul
         - @book.errors.full_messages.each do |message|
           %li= message
@@ -19,4 +20,4 @@
     = f.label :picture
     = f.file_field :picture
   .actions
-    = f.submit 'Save'
+    = f.submit t('nav.save')
