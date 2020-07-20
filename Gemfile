@@ -49,6 +49,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # rails console の強化
   gem 'awesome_print'
+  # コードリンター
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-minitest'
 end
 
 group :test do
