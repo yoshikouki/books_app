@@ -1,18 +1,20 @@
+- i18n_scope = 'activerecord.attributes.book'
+
 %p#notice= notice
 
 %p
-  %b Title:
+  %b= "#{t('title', scope: i18n_scope)}:"
   = @book.title
 %p
-  %b Memo:
+  %b= "#{t('memo', scope: i18n_scope)}:"
   = @book.memo
 %p
-  %b Author:
+  %b= "#{t('author', scope: i18n_scope)}:"
   = @book.author
 %p
-  %b Picture:
+  %b= "#{t('picture', scope: i18n_scope)}:"
   = image_tag @book.picture_url if @book.picture.present?
 
-= link_to 'Edit', edit_book_path(@book)
+= link_to t('nav.edit'), edit_book_path(@book)
 \|
-= link_to 'Back', books_path
+= link_to t('nav.back'), books_path

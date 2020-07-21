@@ -1,8 +1,25 @@
 ja:
+  app_title: 'BookApp'
   books:
+    index:
+      page_title: 'ブック一覧'
+    new:
+      page_title: '新規ブック'
+      # page_title: 'New book'
     create:
       success: '新しいブックが登録されました！'
+    edit:
+      page_title: 'ブック編集'
+      # page_title: 'Editing book'
     update:
       success: 'ブックは更新されました！'
     destroy:
       success: 'ブックは削除されました。'
+  nav:
+    new: '作成'
+    show: '詳細'
+    edit: '変更'
+    save: '保存'
+    back: '戻る'
+    destroy: '削除'
+    destroy_confirm: '本当に削除しますか？'

@@ -1,12 +1,15 @@
-%h1 Listing books
+- i18n_book_scope = 'activerecord.attributes.book'
+
+%h1
+  = t('.page_title')
 
 %table
   %thead
     %tr
-      %th Title
-      %th Memo
-      %th Author
-      %th Picture
+      %th= t('title', scope: i18n_book_scope)
+      %th= t('memo', scope: i18n_book_scope)
+      %th= t('author', scope: i18n_book_scope)
+      %th= t('picture', scope: i18n_book_scope)
       %th
       %th
       %th
@@ -18,10 +21,14 @@
         %td= book.memo
         %td= book.author
         %td= book.picture
-        %td= link_to 'Show', book
-        %td= link_to 'Edit', edit_book_path(book)
-        %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('nav.show'), book
+        %td= link_to t('nav.edit'), edit_book_path(book)
+        %td
+          = link_to(t('nav.destroy'),
+                    book,
+                    method: :delete,
+                    data: { confirm: t('nav.destroy_confirm') })
 
 %br
 
-= link_to 'New Book', new_book_path
+= link_to t('nav.new'), new_book_path
