@@ -6,3 +6,9 @@ ja:
         memo: '備考'
         author: '著者'
         picture: '画像'
+    errors:
+      template:
+        header:
+          one: "1つのエラーが見つかったため、ブックは保存できませんでした"
+          other: "%{count}つのエラーが見つかったため、ブックは保存できませんでした"
+        body:    "次の項目をご確認ください : "
