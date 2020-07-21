@@ -36,8 +36,11 @@ gem 'haml-rails'
 gem 'carrierwave'
 # I18n
 gem 'rails-i18n', '~> 6.0.0'
+gem 'devise-i18n'
 # ページネーション
 gem 'kaminari'
+# ユーザー認証
+gem 'devise', '~> 4.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
