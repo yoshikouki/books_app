@@ -1,0 +1,19 @@
+- i18n_devise_scope = 'devise.shared.links'
+%nav
+  = link_to(root_path, id: "logo") do
+    %h1
+      = t('app_title')
+
+  - if user_signed_in?
+    -# ログイン時
+    = link_to(user_registration_path,
+              id: "user-registration-link") do
+      = current_user.name
+  - else
+    -# ログアウト時
+    = link_to(new_user_session_path,
+              id: 'sign-in-link') do
+      = t('sign_in', scope: i18n_devise_scope)
+    = link_to(new_user_registration_path,
+              id: 'sign-in-link') do
+      = t('sign_up', scope: i18n_devise_scope)
