@@ -1,15 +1,13 @@
-- i18n_book_scope = 'activerecord.attributes.book'
-
 %h1
   = t('.page_title')
 
 %table
   %thead
     %tr
-      %th= t('title', scope: i18n_book_scope)
-      %th= t('memo', scope: i18n_book_scope)
-      %th= t('author', scope: i18n_book_scope)
-      %th= t('picture', scope: i18n_book_scope)
+      %th= Book.human_attribute_name(:title)
+      %th= Book.human_attribute_name(:memo)
+      %th= Book.human_attribute_name(:author)
+      %th= Book.human_attribute_name(:picture)
       %th
       %th
       %th
