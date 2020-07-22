@@ -8,6 +8,9 @@ ja:
         picture: '画像'
       user:
         name: 'ユーザー名'
+        biography: '自己紹介'
+        zip_code: '郵便番号'
+        address: '住所'
     errors:
       template:
         header:

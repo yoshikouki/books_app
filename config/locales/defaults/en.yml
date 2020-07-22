@@ -6,6 +6,11 @@ en:
         memo: 'Memo'
         author: 'Author'
         picture: 'Picture'
+      user:
+        name: 'Name'
+        biography: 'Bio'
+        zip_code: 'Zip code'
+        address: 'Address'
     errors:
       template:
         header:
