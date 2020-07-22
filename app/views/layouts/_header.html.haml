@@ -6,7 +6,7 @@
 
   - if user_signed_in?
     -# ログイン時
-    = link_to(user_registration_path,
+    = link_to(user_path(current_user.id),
               id: "user-registration-link") do
       = current_user.name
   - else

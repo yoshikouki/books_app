@@ -21,6 +21,7 @@ ja:
     back: '戻る'
     destroy: '削除'
     destroy_confirm: '本当に削除しますか？'
+    sign_out: 'ログアウト'
   # ページネーション（kaminari）
   views:
     pagination:

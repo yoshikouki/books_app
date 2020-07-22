@@ -17,6 +17,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource
   def show
     @user = User.find(params[:id])
+    render 'devise/registrations/show'
   end
 
   # GET /resource/edit
