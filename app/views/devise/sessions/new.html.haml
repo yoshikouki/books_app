@@ -1,4 +1,8 @@
-%h2 Log in
+- i18n_devise_scope = 'devise.sessions.new'
+
+%h2
+  = t('sign_in', scope: i18n_devise_scope)
+
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
     = f.label :email
@@ -13,5 +17,6 @@
       = f.check_box :remember_me
       = f.label :remember_me
   .actions
-    = f.submit "Log in"
+    = f.submit t('sign_in', scope: i18n_devise_scope)
+
 = render "devise/shared/links"
