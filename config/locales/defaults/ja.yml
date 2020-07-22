@@ -6,6 +6,8 @@ ja:
         memo: '備考'
         author: '著者'
         picture: '画像'
+      user:
+        name: 'ユーザー名'
     errors:
       template:
         header:
