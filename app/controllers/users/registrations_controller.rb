@@ -20,6 +20,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     render 'devise/registrations/show'
   end
 
+  def build_resource(hash = nil)
+    hash[:uid] = User.create_unique_string
+    super
+  end
+
   # GET /resource/edit
   # def edit
   #   super
