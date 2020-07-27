@@ -19,4 +19,7 @@
   .actions
     = f.submit t('sign_in', scope: i18n_devise_scope)
 
+  = link_to(t('sign_in_with_privider', scope: 'devise.shared.links', provider: 'GitHub'),
+            user_github_omniauth_authorize_path)
+
 = render "devise/shared/links"
