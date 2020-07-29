@@ -1,9 +1,6 @@
 %h2
   - if @user.avatar.attached?
-    = image_tag @user.avatar
-  - else
-    = image_tag '/default_user.png'
-
+    = image_tag @user.avatar.variant(resize_to_fill: [200, 200])
   = @user.name
 
 .profile
