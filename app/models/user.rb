@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[github]
 
+  has_one_attached :avatar
+
   def self.find_for_github_oauth(auth, _signed_in_resource = nil)
     user = find_by(provider: auth.provider, uid: auth.uid)
     user ||= new(provider: auth.provider,
