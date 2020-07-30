@@ -25,13 +25,21 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
-    @book.save ? redirect_to(@book, notice: t('.success')) : render(:new)
+    if @book.save
+      redirect_to(@book, notice: t('.success'))
+    else
+      render(:new)
+    end
   end
 
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
-    @book.update(book_params) ? redirect_to(@book, notice: t('.success')) : render(:edit)
+    if @book.update(book_params)
+      redirect_to(@book, notice: t('.success'))
+    else
+      render(:edit)
+    end
   end
 
   # DELETE /books/1
