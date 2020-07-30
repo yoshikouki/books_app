@@ -5,12 +5,10 @@
       = t('app_title')
 
   - if user_signed_in?
-    -# ログイン時
     = link_to(user_path(current_user.id),
               id: "user-registration-link") do
       = current_user.name
   - else
-    -# ログアウト時
     = link_to(new_user_session_path,
               id: 'sign-in-link') do
       = t('sign_in', scope: i18n_devise_scope)
