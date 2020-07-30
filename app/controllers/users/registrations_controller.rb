@@ -8,7 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def build_resource(hash = nil)
-    hash[:uid] = User.create_unique_string
+    hash[:uid] = SecureRandom.uuid
     super
   end
 end

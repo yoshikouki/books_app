@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
-  def self.find_for_github_oauth(auth, _signed_in_resource = nil)
+  def self.find_for_github_oauth(auth)
     user = find_by(provider: auth.provider, uid: auth.uid)
     user ||= new(provider: auth.provider,
                  uid: auth.uid,
@@ -20,9 +20,5 @@ class User < ApplicationRecord
 
   def self.dummy_email(auth)
     "#{auth.uid}-#{auth.provider}@example.com"
-  end
-
-  def self.create_unique_string
-    SecureRandom.uuid
   end
 end
