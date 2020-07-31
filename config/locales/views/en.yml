@@ -23,11 +23,12 @@ en:
     destroy_confirm: 'Are you sure?'
   # ページネーション（kaminari）
   views:
-    first: "&laquo; First"
-    last: "Last &raquo;"
-    previous: "&lsaquo; Prev"
-    next: "Next &rsaquo;"
-    truncate: "&hellip;"
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
   helpers:
     page_entries_info:
       one_page:
