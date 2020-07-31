@@ -6,15 +6,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-<<<<<<< HEAD
-<<<<<<< HEAD
     @books = Book.page(params[:page]).per(10)
-=======
-    @books = Book.page(params[:page]).per(3)
->>>>>>> 2817a1c... update/ Indexページにページネートを実装
-=======
-    @books = Book.page(params[:page]).per(10)
->>>>>>> 282dd67... change/ Indexページネーションの単位を変更
   end
 
   # GET /books/1
