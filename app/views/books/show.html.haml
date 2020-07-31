@@ -1,18 +1,18 @@
 %p#notice= notice
 
 %p
-  %b Title:
+  %b= "#{Book.human_attribute_name(:title)}:"
   = @book.title
 %p
-  %b Memo:
+  %b= "#{Book.human_attribute_name(:memo)}:"
   = @book.memo
 %p
-  %b Author:
+  %b= "#{Book.human_attribute_name(:author)}:"
   = @book.author
 %p
-  %b Picture:
+  %b= "#{Book.human_attribute_name(:picture)}:"
   = image_tag @book.picture_url if @book.picture.present?
 
-= link_to 'Edit', edit_book_path(@book)
+= link_to t('nav.edit'), edit_book_path(@book)
 \|
-= link_to 'Back', books_path
+= link_to t('nav.back'), books_path
