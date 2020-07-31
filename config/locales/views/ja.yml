@@ -5,12 +5,10 @@ ja:
       page_title: 'ブック一覧'
     new:
       page_title: '新規ブック'
-      # page_title: 'New book'
     create:
       success: '新しいブックが登録されました！'
     edit:
       page_title: 'ブック編集'
-      # page_title: 'Editing book'
     update:
       success: 'ブックは更新されました！'
     destroy:

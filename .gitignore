@@ -37,6 +37,7 @@
 # エディタ
 /.idea
 /.idea/*
+/.generators
 
 # その他
 /.byebug_history

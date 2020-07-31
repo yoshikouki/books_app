@@ -6,15 +6,7 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-<<<<<<< HEAD
-<<<<<<< HEAD
     @books = Book.page(params[:page]).per(10)
-=======
-    @books = Book.page(params[:page]).per(3)
->>>>>>> 2817a1c... update/ Indexページにページネートを実装
-=======
-    @books = Book.page(params[:page]).per(10)
->>>>>>> 282dd67... change/ Indexページネーションの単位を変更
   end
 
   # GET /books/1
@@ -33,13 +25,21 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = Book.new(book_params)
-    @book.save ? redirect_to(@book, notice: t('.success')) : render(:new)
+    if @book.save
+      redirect_to(@book, notice: t('.success'))
+    else
+      render(:new)
+    end
   end
 
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
-    @book.update(book_params) ? redirect_to(@book, notice: t('.success')) : render(:edit)
+    if @book.update(book_params)
+      redirect_to(@book, notice: t('.success'))
+    else
+      render(:edit)
+    end
   end
 
   # DELETE /books/1
